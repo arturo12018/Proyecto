@@ -51,7 +51,24 @@ while  opcion!=3:
                                 fecha=input("Fecha: ")
                                 datosvuelo[datos].append(fecha)
                                 print("se registro correctamente")
-                        print(datosvuelo)
+                        if re==3:
+                            for datos in range(novuelos):
+                                print("\nVuelo no:",datos+1)
+                                print("\n\nDestino:",datosvuelo[datos][0])
+                                print("Hora de salida:",datosvuelo[datos][1])
+                                print("Hora llegada:",datosvuelo[datos][2])
+                                print("Costo turista:",datosvuelo[datos][3])
+                                print("Costo Negocios:",datosvuelo[datos][4])
+                                print("Costo Primera clase:",datosvuelo[datos][5])
+                                print("Lugares Clase Turistica:",datosvuelo[datos][6])
+                                print("Lugares Clase Negocios:",datosvuelo[datos][7])
+                                print("Lugares Primera Clase:",datosvuelo[datos][8])
+                                print("Fecha de salida:",datosvuelo[datos][9])
+                        
+                        if re==4:
+                            bo=int(input("Ingrese que vuelo desea borrar: "))
+                            
+                        
                         if re==8:
                             print("\nAdministrativo:",x[0],"\nApellido:",x[2],"\nEdad:",x[4],"\nSalario:",x[3], "\nContraseña:",x[1])
                             
