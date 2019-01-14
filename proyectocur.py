@@ -1,8 +1,3 @@
-def op8ad(x):
-    print("Administrativo:",x[0],"\nApellido:",x[2],"\nEdad:",x[4],"\nSalario:",x[3], "\nContraseña:",x[1])
-    pass
-
-
 opcion=5
 while  opcion!=3:
     opcion=int(input("----SISTEMA DE VENTAS----\n   1. Administrador \n   2. Clinte  \n   3. Salir \nopcion: "))
@@ -24,16 +19,51 @@ while  opcion!=3:
                     elif administrador2==x:
                         administrador2=["Luis","123","Ortiz","2000$",19]
                         x=administrador2
-                
-                    op8ad(x)
-                    
+                    re=11
+                    while re!=9:
+                        re=int(input("---Sistema de ventas---\n1.Ingresa no. maximos de vuelos\n2.Ingresar vuelos\n3.Listar de vuelos\n4.Cancelar vuelos\n5.Actualizar vuelos\n6.Estadisticas de pago\n7.Estadisticas de clasesn\n8.Informacion administrador\n9.Regresar\nOpcion: "))
+                        if re==1:
+                            novuelos=int(input("ingrese no. de vuelos:  "))
+                            print(novuelos)
+                        if re==2:
+                            datosvuelo=[]
+                            for datos in range(novuelos):
+                                datosvuelo.append([])
+                                print("\nvuelo",datos+1)
+                                destino=input("Destino: ")
+                                datosvuelo[datos].append(destino)
+                                salida=input("Hora de salida: ")
+                                datosvuelo[datos].append(salida)
+                                llegada=input("Llegada: ")
+                                datosvuelo[datos].append(llegada)
+                                costotu=input("Costo de vieaje de turista: ")
+                                datosvuelo[datos].append(costotu)
+                                costone=input("Costo de viaje de negocios : ")
+                                datosvuelo[datos].append(costone)
+                                costopr=input("Costo de viaje de primera clase: ")
+                                datosvuelo[datos].append(costopr)
+                                cltu=int(input("Disponible clase turistica: "))
+                                datosvuelo[datos].append(cltu)
+                                cln=int(input("Disponible clase negocios: "))
+                                datosvuelo[datos].append(cln)
+                                clp=int(input("Disponible primera clase : "))
+                                datosvuelo[datos].append(clp)
+                                fecha=input("Fecha: ")
+                                datosvuelo[datos].append(fecha)
+                                print("se registro correctamente")
+                        print(datosvuelo)
+                        if re==8:
+                            print("\nAdministrativo:",x[0],"\nApellido:",x[2],"\nEdad:",x[4],"\nSalario:",x[3], "\nContraseña:",x[1])
+                            
+                        if re!=1 and re!=2 and re!=3 and re!=4 and re!=5 and re!=6 and re!=7 and re!=8 and re!=9: 
+                            print("\nopcion invalida ingrese otra opcion:")
                     
                 if administrador1!=x and administrador2!=x  :
                     print("administrador o contraseña esta mal")
                     
                      
             if op!=2 and op!=1:
-                 print("\nopcion invalida")
+                 print("\nopcion invalida ingrese otra opcion:")
         
         
     elif opcion==2:
@@ -45,10 +75,10 @@ while  opcion!=3:
             if op==2:
                 print("cliente")
             if op!=2 and op!=1 and op!=3:
-                 print("\nopcion invalida")
+                 print("\nopcion invalida ingrese otra opcion:")
                  
     elif opcion==3:
         print("Gracias por usar")
     else:
-        print("\nopcion invalida")
+        print("\nopcion invalida ingrese otra opcion:")
     
