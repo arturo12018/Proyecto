@@ -16,17 +16,19 @@ while  opcion!=3:
                 x=[]
                 x.append(input("Administrador:  "))
                 x.append(input("Contraseña:  "))
-                if administrador1==x:  
-                    administrador1=["Arturo","123","Muñoz","2000$",19]
-                    x=administrador1
+                if administrador1==x or administrador2==x:
+                    if administrador1==x:  
+                        administrador1=["Arturo","123","Muñoz","2000$",19]
+                        x=administrador1
+                            
+                    elif administrador2==x:
+                        administrador2=["Luis","123","Ortiz","2000$",19]
+                        x=administrador2
+                
+                    op8ad(x)
                     
-                if administrador2==x:
-                    administrador2=["Luis","123","Ortiz","2000$",19]
-                    x=administrador2
                     
-                    
-                    
-                if administrador1!=x and administrador2!=x :
+                if administrador1!=x and administrador2!=x  :
                     print("administrador o contraseña esta mal")
                     
                      
@@ -44,8 +46,6 @@ while  opcion!=3:
                 print("cliente")
             if op!=2 and op!=1 and op!=3:
                  print("\nopcion invalida")
-                 
-                 
                  
     elif opcion==3:
         print("Gracias por usar")
